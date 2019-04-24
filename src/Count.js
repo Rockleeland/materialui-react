@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import WaterView from "./WaterView";
+import Button from "@material-ui/core/Button";
 
 export default class Count extends Component {
   state = {
@@ -34,25 +35,25 @@ export default class Count extends Component {
         backgroundColor: "#aad4e5"
       };
       return (
-      //passing props to functional component
-        <WaterView 
-            toggle={this.toggle} 
-            hideShow="Hide" 
-            style={style} 
-            waterForm='Ice'
+        //passing props to functional component
+        <WaterView
+          toggle={this.toggle}
+          hideShow="Hide"
+          style={style}
+          waterForm="Ice"
         />
-      )
+      );
     }
     if (this.state.view) {
-    //passing props to functional component
+      //passing props to functional component
       return (
-        <WaterView 
-            toggle={this.toggle} 
-            hideShow="Hide" 
-            style={style} 
-            waterForm='Water'
+        <WaterView
+          toggle={this.toggle}
+          hideShow="Hide"
+          style={style}
+          waterForm="Water"
         />
-      )
+      );
     }
     return <button onClick={this.toggle}>Show div!</button>;
   };
@@ -60,8 +61,20 @@ export default class Count extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.increment}>+32</button>
-        <button onClick={this.decrement}>-32</button>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          onClick={this.increment}
+        >
+          +32
+        </Button>
+        <Button 
+          variant="contained" 
+          color="secondary" 
+          onClick={this.decrement}
+        >
+          -32
+        </Button>
         <p>{this.state.count}</p>
         <div>{this.containerView()}</div>
       </div>
