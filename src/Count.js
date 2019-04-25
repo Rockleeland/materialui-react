@@ -82,21 +82,21 @@ export default class Count extends Component {
       <div>
         <Button 
           variant="contained" 
-          color="primary" 
+          color="secondary" 
           onClick={this.increment}
         >
           +32
         </Button>
         <Button 
           variant="contained" 
-          color="secondary" 
+          color="primary" 
           onClick={this.decrement}
         >
           -32
         </Button>
-        <p>Temperature: {this.state.count}</p>
-        <p>Steam temperature: 212 °F</p>
-        <p>Ice temperature: 32 °F</p>
+        <p><b>Temperature:</b> {this.state.count}</p>
+        <p><b>Steam temperature:</b> 212 °F</p>
+        <p><b>Ice temperature:</b> 32 °F</p>
         <div>{this.containerView()}</div>
       </div>
     );
