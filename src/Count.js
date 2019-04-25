@@ -50,7 +50,7 @@ export default class Count extends Component {
         <WaterView
           toggle={this.toggle}
           hideShow="Hide"
-          waterForm="Ice"
+          waterForm="Steam"
           description="This is steam"
           photo={Steam}
           firstLetter='S'
