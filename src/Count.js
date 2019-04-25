@@ -39,6 +39,7 @@ export default class Count extends Component {
           waterForm="Ice"
           description="This is Ice"
           photo={Ice}
+          firstLetter='I'
         >
         Ice Ice baby
         </WaterView>
@@ -52,6 +53,7 @@ export default class Count extends Component {
           waterForm="Ice"
           description="This is steam"
           photo={Steam}
+          firstLetter='S'
         >
         Hissssssss
         </WaterView>
@@ -66,6 +68,7 @@ export default class Count extends Component {
           waterForm="Water"
           description="This is water"
           photo={Water}
+          firstLetter='W'
         >
           Elixir of life
         </WaterView>

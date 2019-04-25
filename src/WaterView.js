@@ -205,12 +205,17 @@ class RecipeReviewCard extends React.Component {
 
     return (
       <div>
-        <Button classname="div-button" variant="contained" onClick={this.props.toggle}>{this.props.hideShow} div!</Button>
+        <Button 
+            variant="contained" 
+            onClick={this.props.toggle}
+        >
+            {this.props.hideShow} div!
+        </Button>
         <Card className={classes.card}>
           <CardHeader
             avatar={
               <Avatar aria-label="Recipe" className={classes.avatar}>
-                R
+                {this.props.firstLetter}
               </Avatar>
             }
             action={
