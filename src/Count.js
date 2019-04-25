@@ -95,6 +95,8 @@ export default class Count extends Component {
           -32
         </Button>
         <p>Temperature: {this.state.count}</p>
+        <p>Steam temperature: 212 °F</p>
+        <p>Ice temperature: 32 °F</p>
         <div>{this.containerView()}</div>
       </div>
     );
