@@ -46,7 +46,7 @@ export default class Count extends Component {
       );
     } else if (this.state.count > 212 && this.state.view) {
       return (
-        //passing props to functional component
+        //passing props to component
         <WaterView
           toggle={this.toggle}
           hideShow="Hide"

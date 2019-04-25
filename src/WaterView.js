@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css';
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import classnames from "classnames";
@@ -56,7 +57,8 @@ class RecipeReviewCard extends React.Component {
 
     return (
       <div>
-        <Button 
+        <Button
+            className="div-button" 
             variant="contained" 
             onClick={this.props.toggle}
         >
