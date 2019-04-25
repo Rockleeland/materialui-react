@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import WaterView from "./WaterView";
 import Button from "@material-ui/core/Button";
+import Ice from './images/ice.jpg';
+import Water from './images/water.jpg'
+import Steam from './images/steam.jpg'
 
 export default class Count extends Component {
   state = {
@@ -27,21 +30,31 @@ export default class Count extends Component {
   };
 
   containerView = () => {
-    let style = {
-      backgroundColor: "blue"
-    };
     if (this.state.count <= 32 && this.state.view) {
-      style = {
-        backgroundColor: "#aad4e5"
-      };
       return (
         //passing props to functional component
         <WaterView
           toggle={this.toggle}
           hideShow="Hide"
-          style={style}
           waterForm="Ice"
-        />
+          description="This is Ice"
+          photo={Ice}
+        >
+        Ice Ice baby
+        </WaterView>
+      );
+    } else if (this.state.count > 212 && this.state.view) {
+      return (
+        //passing props to functional component
+        <WaterView
+          toggle={this.toggle}
+          hideShow="Hide"
+          waterForm="Ice"
+          description="This is steam"
+          photo={Steam}
+        >
+        Hissssssss
+        </WaterView>
       );
     }
     if (this.state.view) {
@@ -50,12 +63,15 @@ export default class Count extends Component {
         <WaterView
           toggle={this.toggle}
           hideShow="Hide"
-          style={style}
           waterForm="Water"
-        />
+          description="This is water"
+          photo={Water}
+        >
+          Elixir of life
+        </WaterView>
       );
     }
-    return <button onClick={this.toggle}>Show div!</button>;
+    return <Button variant="contained" onClick={this.toggle}>Show div!</Button>;
   };
 
   render() {
@@ -75,7 +91,7 @@ export default class Count extends Component {
         >
           -32
         </Button>
-        <p>{this.state.count}</p>
+        <p>Temperature: {this.state.count}</p>
         <div>{this.containerView()}</div>
       </div>
     );
